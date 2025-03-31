@@ -7,7 +7,7 @@
 ![Static Badge](https://img.shields.io/badge/python-3.13-blue?style=plastic)
 
 <p float="left">
-  <img src="media/draft4_demo.gif" height="500" />
+  <img src="media/draft4_demo.gif" height="300" />
 </p>
 
 
@@ -18,8 +18,8 @@ This Robotic Arm is designed to perform simple to complex manipulative tasks, en
 The arm can be used both vertically, like a human arm, or horizontally, like a traditional DOF robot. It only needs to be connected to a computer through the USB-C port.
 
 <p float="left">
-  <img src="media/Full_arm_v0.1_bend__human_iso.png" height="500" />
-  <img src="media/Full_arm_v0.1_bend__manipulator_iso.png" height="500" />
+  <img src="media/Full_arm_v0.1_bend__human_iso.png" height="300" />
+  <img src="media/Full_arm_v0.1_bend__manipulator_iso.png" height="300" />
 </p>
 
 ## Sourcing Parts
@@ -103,12 +103,12 @@ A first draft was made in Isaac Sim to determine the required specifications for
 Lula RMPflow controller is used, with different positions given while joint effort and velocity are recorded:
 
 <p float="left">
-  <img src="media/draft3_demo.gif" height="500" />
+  <img src="media/draft3_demo.gif" height="300" />
 </p>
 
 <p float="left">
-  <img src="media/arm_effort.png" height="500" />
-  <img src="media/arm_vel.png" height="500" />
+  <img src="media/arm_effort.png" height="400" />
+  <img src="media/arm_vel.png" height="400" />
 </p>
 
 ### The minimum actuator specifications required are:
@@ -135,7 +135,7 @@ The shape of the rotor and stator has been tuned using the Python script `cycloi
 | Sharpness    | 6.5 mm  | Pitch angle around stator ring pins |
 
 <p float="left">
-  <img src="media/python_cycloid_tuning_v2.gif" height="600" />
+  <img src="media/python_cycloid_tuning_v2.gif" height="450" />
 </p>
 
 
@@ -144,8 +144,8 @@ As both rotors and the housing are **3D printed**, a **three-rotor design** has 
 The Cycloid assembly can be open with `Cycloid_drive_default.STEP` in the `/STEP` folder.  
 
 <p float="left">
-  <img src="media/cad-v4-1_explosed_view.png" height="450" />
-  <img src="media/cad-v4-1_iso_view.png" height="450" />
+  <img src="media/cad-v4-1_explosed_view.png" height="250" />
+  <img src="media/cad-v4-1_iso_view.png" height="250" />
 </p>
 
 A load test has been conducted to measure output torque, speed, backlash, and efficiency:  
@@ -166,7 +166,7 @@ Use the main Assembly File for the main assembly `Bionic_arm.STEP`
 **Upper and Middle Wire Management :**
 
 <p float="left">
-  <img src="media/Full_arm_v0.1_upper-middle_wire.png" height="600" />
+  <img src="media/Full_arm_v0.1_upper-middle_wire.png" height="350" />
 </p>
 
 ## IsaacSim
@@ -175,7 +175,7 @@ Use the main Assembly File for the main assembly `Bionic_arm.STEP`
 ### Manipulation Tasks (coming soon):
 
 <p float="left">
-  <img src="media/draft4_demo.gif" height="600" />
+  <img src="media/draft4_demo.gif" height="300" />
 </p>
 
 ### RL (coming soon):
