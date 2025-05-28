@@ -1,13 +1,15 @@
 # Robotic Arm
 
 
-![Static Badge](https://img.shields.io/badge/version-0.1-red?style=plastic)
+![Static Badge](https://img.shields.io/badge/version-1.0-red?style=plastic)
 ![Static Badge](https://img.shields.io/badge/Solidworks-2025-blue?style=plastic)
-![Static Badge](https://img.shields.io/badge/IsaacSim-4.2-blue?style=plastic)
-![Static Badge](https://img.shields.io/badge/python-3.13-blue?style=plastic)
+![Static Badge](https://img.shields.io/badge/IsaacSim-4.5-blue?style=plastic)
+![Static Badge](https://img.shields.io/badge/python-3.10-blue?style=plastic)
+
+
 
 <p float="left">
-  <img src="media/draft4_demo.gif" height="300" />
+  <img src="media/Synced.gif" height="500" />
 </p>
 
 
@@ -18,8 +20,8 @@ This Robotic Arm is designed to perform simple to complex manipulative tasks, en
 The arm can be used both vertically, like a human arm, or horizontally, like a traditional DOF robot. It only needs to be connected to a computer through the USB-C port.
 
 <p float="left">
-  <img src="media/Full_arm_v0.1_bend__human_iso.png" height="300" />
-  <img src="media/Full_arm_v0.1_bend__manipulator_iso.png" height="300" />
+  <img src="media/Full_arm_v0.1_bend__human_iso.png" height="500" />
+  <img src="media/Full_arm_v0.1_bend__manipulator_iso.png" height="500" />
 </p>
 
 ## Sourcing Parts
@@ -103,12 +105,12 @@ A first draft was made in Isaac Sim to determine the required specifications for
 Lula RMPflow controller is used, with different positions given while joint effort and velocity are recorded:
 
 <p float="left">
-  <img src="media/draft3_demo.gif" height="300" />
+  <img src="media/draft3_demo.gif" height="500" />
 </p>
 
 <p float="left">
-  <img src="media/arm_effort.png" height="400" />
-  <img src="media/arm_vel.png" height="400" />
+  <img src="media/arm_effort.png" height="500" />
+  <img src="media/arm_vel.png" height="500" />
 </p>
 
 ### The minimum actuator specifications required are:
@@ -117,7 +119,7 @@ Lula RMPflow controller is used, with different positions given while joint effo
 
 **STS3215** serial servo (3 Nm, 5.5 rad/s, 12V) has been selected for all the joints.
 
-**STS3215** serial servo allows easier wire management, position/velocity/torque feedback, and features a multi-turn encoder.  
+Serial servo allows easier wire management, position/velocity/torque feedback, and features a multi-turn encoder.  
 A cycloidal drive will be coupled to the STS servo to achieve the desired torque.
 
 
@@ -135,7 +137,7 @@ The shape of the rotor and stator has been tuned using the Python script `cycloi
 | Sharpness    | 6.5 mm  | Pitch angle around stator ring pins |
 
 <p float="left">
-  <img src="media/python_cycloid_tuning_v2.gif" height="450" />
+  <img src="media/python_cycloid_tuning_v2.gif" height="600" />
 </p>
 
 
@@ -144,16 +146,16 @@ As both rotors and the housing are **3D printed**, a **three-rotor design** has 
 The Cycloid assembly can be open with `Cycloid_drive_default.STEP` in the `/STEP` folder.  
 
 <p float="left">
-  <img src="media/cad-v4-1_explosed_view.png" height="250" />
-  <img src="media/cad-v4-1_iso_view.png" height="250" />
+  <img src="media/cad-v4-1_explosed_view.png" height="300" />
+  <img src="media/cad-v4-1_iso_view.png" height="300" />
 </p>
 
 A load test has been conducted to measure output torque, speed, backlash, and efficiency:  
 
-- **Output torque**: 8.5 Nm  
+- **Output torque**: 9 Nm  
 - **Output velocity**: 1.1 rad/s  
 - **Backlash after load**: 0.5°  
-- **Efficiency**: (8.5/3)/5 = **0.56** *(test were conducted without grease)*  
+- **Efficiency**: (9/3)/5 = **0.6** *(test were conducted with grease)*  
 
 
 
@@ -161,30 +163,64 @@ A load test has been conducted to measure output torque, speed, backlash, and ef
 
 Use the main Assembly File for the main assembly `Bionic_arm.STEP`
 
-> Wire length must be calculated by doing a full amplitude on the joint before soldering it.
 
-**Upper and Middle Wire Management :**
+**Base component management :**
 
 <p float="left">
-  <img src="media/Full_arm_v0.1_upper-middle_wire.png" height="350" />
+  <img src="media/assembly/Base_component.JPEG" height="450" />
+  <img src="media/assembly/Base-Shoulder_Link.JPEG" height="450" />
+  <img src="media/assembly/Base_to_middle.JPEG" height="450" />
+
 </p>
+
+> Wire length must be calculated by doing a full amplitude on the joint before soldering it.
+
+**Upper link Wire Management :**
+
+<p float="left">
+  <img src="media/Full_arm_v0.1_upper-middle_wire.png" height="450" />
+  <img src="media/assembly/Shoulder-Main_upper_link.JPEG" height="450" />
+</p>
+
+> Same wire management for Elbow link
+
+
+**Fore arm and Wrist link**
+
+<p float="left">
+  <img src="media/assembly/Fore_arm_link.JPEG" height="450" />
+  <img src="media/assembly/Wrist_link.JPEG" height="450" />
+</p>
+
+
 
 ## IsaacSim
 
+IsaacSim USD file can be found in /isaacSim/USD
 
-### Manipulation Tasks (coming soon):
+
+### Manipulation Tasks :
+
+In this task, IsaacSim lead the real arm using Lula RMPFlow controller. Current positions and velocities of each joint are sent to the robot in real time :
 
 <p float="left">
-  <img src="media/draft4_demo.gif" height="300" />
+  <img src="media/Synced.gif" height="500" />
 </p>
 
 ### RL (coming soon):
 
 Reinforcement learning model with IsaacLab.
 
-## Software (coming soon):
+## Software :
 
-- ROS2 interface for the serial bus to allow easy export from simulation to real-world and run both together.
-- Python script with embedded AI models.
+<p>Servo motor-related features, such as calibration and serial addressing, were inspired by scripts from <a href="https://github.com/huggingface/lerobot"> Lerobot repository.</a></p>
 
+IsaacSim instance is hosted on a cloud machine, and communication with the local system is handled via a TCP socket, as illustrated in the diagram below. Currently, TCP communication is unidirectional—from IsaacSim to the robot—due to internet latency constraints.
+
+
+<p float="left">
+  <img src="media/Workflow_software.jpg" height="400" />
+</p>
+
+The local system runs a main control program , which orchestrates motor connection, calibration routines, overload protection, position safety mechanisms, and TCP communication. All the scripts are written in Python
 
