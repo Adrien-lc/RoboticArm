@@ -9,7 +9,7 @@
 
 
 <p float="left">
-  <img src="media/Synced.gif" height="500" />
+  <img src="media/Synced.gif" height="400" />
 </p>
 
 
@@ -20,8 +20,8 @@ This Robotic Arm is designed to perform simple to complex manipulative tasks, en
 The arm can be used both vertically, like a human arm, or horizontally, like a traditional DOF robot. It only needs to be connected to a computer through the USB-C port.
 
 <p float="left">
-  <img src="media/Full_arm_v0.1_bend__human_iso.png" height="500" />
-  <img src="media/Full_arm_v0.1_bend__manipulator_iso.png" height="500" />
+  <img src="media/Full_arm_v0.1_bend__human_iso.png" height="400" />
+  <img src="media/Full_arm_v0.1_bend__manipulator_iso.png" height="400" />
 </p>
 
 ## Sourcing Parts
@@ -105,7 +105,7 @@ A first draft was made in Isaac Sim to determine the required specifications for
 Lula RMPflow controller is used, with different positions given while joint effort and velocity are recorded:
 
 <p float="left">
-  <img src="media/draft3_demo.gif" height="500" />
+  <img src="media/draft3_demo.gif" height="400" />
 </p>
 
 <p float="left">
@@ -137,7 +137,7 @@ The shape of the rotor and stator has been tuned using the Python script `cycloi
 | Sharpness    | 6.5 mm  | Pitch angle around stator ring pins |
 
 <p float="left">
-  <img src="media/python_cycloid_tuning_v2.gif" height="600" />
+  <img src="media/python_cycloid_tuning_v2.gif" height="400" />
 </p>
 
 
@@ -146,8 +146,8 @@ As both rotors and the housing are **3D printed**, a **three-rotor design** has 
 The Cycloid assembly can be open with `Cycloid_drive_default.STEP` in the `/STEP` folder.  
 
 <p float="left">
-  <img src="media/cad-v4-1_explosed_view.png" height="300" />
-  <img src="media/cad-v4-1_iso_view.png" height="300" />
+  <img src="media/cad-v4-1_explosed_view.png" height="220" />
+  <img src="media/cad-v4-1_iso_view.png" height="220" />
 </p>
 
 A load test has been conducted to measure output torque, speed, backlash, and efficiency:  
@@ -167,9 +167,9 @@ Use the main Assembly File for the main assembly `Bionic_arm.STEP`
 **Base component management :**
 
 <p float="left">
-  <img src="media/assembly/Base_component.JPEG" height="450" />
-  <img src="media/assembly/Base-Shoulder_Link.JPEG" height="450" />
-  <img src="media/assembly/Base_to_middle.JPEG" height="450" />
+  <img src="media/assembly/Base_component.JPEG" height="350" />
+  <img src="media/assembly/Base-Shoulder_Link.JPEG" height="350" />
+  <img src="media/assembly/Base_to_middle.JPEG" height="350" />
 
 </p>
 
@@ -178,8 +178,8 @@ Use the main Assembly File for the main assembly `Bionic_arm.STEP`
 **Upper link Wire Management :**
 
 <p float="left">
-  <img src="media/Full_arm_v0.1_upper-middle_wire.png" height="450" />
-  <img src="media/assembly/Shoulder-Main_upper_link.JPEG" height="450" />
+  <img src="media/Full_arm_v0.1_upper-middle_wire.png" height="350" />
+  <img src="media/assembly/Shoulder-Main_upper_link.JPEG" height="350" />
 </p>
 
 > Same wire management for Elbow link
@@ -188,8 +188,8 @@ Use the main Assembly File for the main assembly `Bionic_arm.STEP`
 **Fore arm and Wrist link**
 
 <p float="left">
-  <img src="media/assembly/Fore_arm_link.JPEG" height="450" />
-  <img src="media/assembly/Wrist_link.JPEG" height="450" />
+  <img src="media/assembly/Fore_arm_link.JPEG" height="350" />
+  <img src="media/assembly/Wrist_link.JPEG" height="350" />
 </p>
 
 
@@ -204,7 +204,7 @@ IsaacSim USD file can be found in /isaacSim/USD
 In this task, IsaacSim lead the real arm using Lula RMPFlow controller. Current positions and velocities of each joint are sent to the robot in real time :
 
 <p float="left">
-  <img src="media/Synced.gif" height="500" />
+  <img src="media/Synced.gif" height="400" />
 </p>
 
 ### RL (coming soon):
