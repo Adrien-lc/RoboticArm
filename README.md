@@ -9,7 +9,7 @@
 
 
 <p float="left">
-  <img src="media/Synced.gif" height="400" />
+  <img src="media/Synced.gif" height="350" />
 </p>
 
 
@@ -20,8 +20,8 @@ This Robotic Arm is designed to perform simple to complex manipulative tasks, en
 The arm can be used both vertically, like a human arm, or horizontally, like a traditional DOF robot. It only needs to be connected to a computer through the USB-C port.
 
 <p float="left">
-  <img src="media/Full_arm_v0.1_bend__human_iso.png" height="400" />
-  <img src="media/Full_arm_v0.1_bend__manipulator_iso.png" height="400" />
+  <img src="media/Full_arm_v0.1_bend__human_iso.png" height="350" />
+  <img src="media/Full_arm_v0.1_bend__manipulator_iso.png" height="350" />
 </p>
 
 ## Sourcing Parts
@@ -105,12 +105,12 @@ A first draft was made in Isaac Sim to determine the required specifications for
 Lula RMPflow controller is used, with different positions given while joint effort and velocity are recorded:
 
 <p float="left">
-  <img src="media/draft3_demo.gif" height="400" />
+  <img src="media/draft3_demo.gif" height="350" />
 </p>
 
 <p float="left">
-  <img src="media/arm_effort.png" height="500" />
-  <img src="media/arm_vel.png" height="500" />
+  <img src="media/arm_effort.png" height="350" />
+  <img src="media/arm_vel.png" height="350" />
 </p>
 
 ### The minimum actuator specifications required are:
@@ -204,7 +204,7 @@ IsaacSim USD file can be found in /isaacSim/USD
 In this task, IsaacSim lead the real arm using Lula RMPFlow controller. Current positions and velocities of each joint are sent to the robot in real time :
 
 <p float="left">
-  <img src="media/Synced.gif" height="400" />
+  <img src="media/Synced.gif" height="350" />
 </p>
 
 ### RL (coming soon):
@@ -219,7 +219,7 @@ IsaacSim instance is hosted on a cloud machine, and communication with the local
 
 
 <p float="left">
-  <img src="media/Workflow_software.jpg" height="400" />
+  <img src="media/Workflow_software.jpg" height="350" />
 </p>
 
 The local system runs a main control program , which orchestrates motor connection, calibration routines, overload protection, position safety mechanisms, and TCP communication. All the scripts are written in Python
